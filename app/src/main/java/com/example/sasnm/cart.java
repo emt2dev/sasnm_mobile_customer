@@ -30,18 +30,19 @@ public class cart extends AppCompatActivity {
     int pricePerKM = 5;
     String apiDomain = "http://10.0.2.2:5035/api/v2/";
     String companyId = "1";
-    String controllerMethod_mobileGetCart = "shoppingCart/mobile/existing/";
-    String controllerMethod_mobileEmptyCart = "shoppingCart/mobile/empty";
-    String controllerMethod_mobileNewDeliveryOrder = "orders/mobile/submit/delivery/";
-    String controllerMethod_mobileNewTakeoutOrder = "orders/mobile/submit/takeout/";
+    String controller = "mobile/customer";
+    String existingCart = "existing/";
+    String emptyCart = "empty/";
+    String deliveryOrder = "submit/delivery/";
+    String takeoutOrder = "submit/takeout/";
     String urlDeliveryOrder =
-            apiDomain + controllerMethod_mobileNewDeliveryOrder + companyId;
+            apiDomain + controller + "/" + deliveryOrder + companyId;
     String urlTakeoutOrder =
-            apiDomain + controllerMethod_mobileNewTakeoutOrder + companyId;
+            apiDomain + controller + "/" + takeoutOrder + companyId;
     String urlGetCart =
-            apiDomain + controllerMethod_mobileGetCart + companyId;
+            apiDomain + controller + "/" + existingCart + companyId;
     String urlEmptyCart =
-            apiDomain + controllerMethod_mobileEmptyCart;
+            apiDomain + controller + "/" + emptyCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

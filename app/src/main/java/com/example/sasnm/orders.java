@@ -27,13 +27,11 @@ public class orders extends AppCompatActivity {
     // here we provide strings that will be concat'd together, makes it easier for future version updates
     String apiDomain = "http://10.0.2.2:5035/api/v2/";
     String companyId = "1";
-    String controllerMethod_getAllOrders = "orders/mobile/all/"; // testing, uses company #1
-    String getAllOrdersUrl = apiDomain + controllerMethod_getAllOrders + companyId; // this is sent to the api
+    String controller = "mobile/customer/";
+    String method = "allorders/"; // testing, uses company #1
+    String getAllOrdersUrl = apiDomain + controller + method + companyId; // this is sent to the api
     String apiUrl;
-    /*
-     *
-     *
-     * */
+
     TextView textViewOrders;
 
     SharedPreferences sharedPreferences;

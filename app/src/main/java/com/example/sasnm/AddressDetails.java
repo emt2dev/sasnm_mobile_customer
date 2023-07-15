@@ -42,10 +42,12 @@ public class AddressDetails extends AppCompatActivity {
     EditText editTextStreet, editTextSuite, editTextCity, editTextState, editTextPostalCode, editTextPhoneNumber;
     Button button;
     String latitude, longitude, urlUpdateUserAddress;
-    String apiDomain = "http://10.0.2.2:5035/api/v2/";
     String companyId = "1";
-    String controllerMethod_mobileUpdateAddress = "customers/mobile/update/address"; // testing, uses company #1
-    String updateAddressUrl = apiDomain + controllerMethod_mobileUpdateAddress; // this is sent to the api
+    String apiDomain = "http://10.0.2.2:5035/api/v2/";
+    String controller = "mobile/customer";
+
+    String updateAddress = "/update/address"; // testing, uses company #1
+    String updateAddressUrl = apiDomain + controller + updateAddress; // this is sent to the api
     SharedPreferences sharedPreferences;
 
     final long UPDATE_INTERVAL_IN_MILLISECONDS = 50000;

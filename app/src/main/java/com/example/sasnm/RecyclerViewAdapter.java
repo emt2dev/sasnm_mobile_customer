@@ -37,12 +37,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
      * */
     // here we provide strings that will be concat'd together, makes it easier for future version updates
     String apiDomain = "http://10.0.2.2:5035/api/v2/";
-    String controllerMethod_addToCart = "shoppingCart/mobile/add";
-    String controllerMethod_removeFromCart = "shoppingCart/mobile/remove";
-    String controllerMethod_emptyCart = "shoppingCart/mobile/empty";
-    String addUrl = apiDomain + controllerMethod_addToCart; // this is sent to the api
-    String removeUrl = apiDomain + controllerMethod_removeFromCart; // this is sent to the api
-    String emptyUrl = apiDomain + controllerMethod_emptyCart; // this is sent to the api
+    String controller = "mobile/customer/";
+    String addToCart = "add";
+    String removeFromCart = "remove";
+    String emptyCart = "empty";
+    String addUrl = apiDomain + controller + addToCart; // this is sent to the api
+    String removeUrl = apiDomain + controller + removeFromCart; // this is sent to the api
+    String emptyUrl = apiDomain + controller + emptyCart; // this is sent to the api
     String UrlBuilder;
     /*
     *

@@ -81,19 +81,6 @@ public class login extends AppCompatActivity {
                 email = editTextEmail.getText().toString();
                 password = editTextPassword.getText().toString();
 
-//                // front-end validation
-//                if(email.equals("")) {
-//                    Toast.makeText(login.this, "email is required", Toast.LENGTH_SHORT).show();
-//                }
-//
-//                if(password.equals("")) {
-//                    Toast.makeText(login.this, "password is required", Toast.LENGTH_SHORT).show();
-//                }
-//
-//                if(email.equals("") && password.equals("")) {
-//                    Toast.makeText(login.this, "email and password are required", Toast.LENGTH_SHORT).show();
-//                }
-
                 // here we provide strings that will be concat'd together, makes it easier for future version updates
                 String apiDomain = "http://10.0.2.2:5035/api/v2/";
                 String controllerMethod = "mobile/customer/login";
@@ -140,8 +127,8 @@ public class login extends AppCompatActivity {
                 }) {
                     protected Map<String, String> getParams() {
                         Map<String, String> paramV = new HashMap<>();
-                        paramV.put("Email", email.toString()); // passed in the POST request
-                        paramV.put("Password", password.toString()); // passed in the POST request
+                        paramV.put("Email", email); // passed in the POST request
+                        paramV.put("Password", password); // passed in the POST request
                         return paramV;
                     }
                 };

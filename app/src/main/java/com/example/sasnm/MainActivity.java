@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     String apiDomain = "http://10.0.2.2:5035/api/v2/";
     String companyId = "1";
     String controllerMethod_getProducts = "products/all/"; // testing, uses company #1
-    String controllerMethod_getCustomerDetails = "customers/mobile/details"; // testing, uses company #1
+    String controllerMethod_getCustomerDetails = "mobile/customer/details"; // testing, uses company #1
     String allProductsUrl = apiDomain + controllerMethod_getProducts + companyId; // this is sent to the api
     String customerDetailsUrl = apiDomain + controllerMethod_getCustomerDetails;
     /*
